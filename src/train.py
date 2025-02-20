@@ -17,6 +17,7 @@ def train_skipgram(model: SkipGramNeg,
                    learning_rate=0.003, 
                    window_size=5, 
                    print_every=1500,
+                   n_negative_samples=5,
                    device='cpu'):
     """Trains the SkipGram model using negative sampling.
 
@@ -29,6 +30,7 @@ def train_skipgram(model: SkipGramNeg,
         learning_rate: The learning rate for the optimizer.
         window_size: The size of the context window for generating training pairs.
         print_every: The frequency of printing the training loss and validation examples.
+        n_negative_samples: The number of negative samples to use for each positive sample.
         device: The device (CPU or GPU) where the tensors will be allocated.
     """
     # Define loss and optimizer

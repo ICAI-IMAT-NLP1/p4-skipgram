@@ -74,7 +74,7 @@ def subsample_words(words: List[str], vocab_to_int: Dict[str, int], threshold: f
     int_words: List[int] = None
     
     freqs: Dict[str, float] = None
-    train_words: List[str] = None
+    train_words: List[int] = None
 
     return train_words, freqs
 

@@ -24,6 +24,7 @@ def main():
     learning_rate = 0.003
     window_size = 5
     print_every = 1500
+    n_negative_samples = 5
     runs_folder = "runs"  # Folder to save models
     model_filename = "skipgram_model.pth"  # Filename to save the model
     model_path = os.path.join(runs_folder, model_filename)  # Full path to the model
@@ -54,7 +55,7 @@ def main():
         print("Model initialized.")
 
         print("Step 5: Training the model...")
-        train_skipgram(model, train_words, int_to_vocab, batch_size, epochs, learning_rate, window_size, print_every, device)
+        train_skipgram(model, train_words, int_to_vocab, batch_size, epochs, learning_rate, window_size, print_every, n_negative_samples, device)
         print("Training completed.")
 
         print("Step 6: Saving the model...")
